@@ -17,3 +17,13 @@ https://www.teknofest.org/tr/competitions/competition/34
 
 # Yarışma için to-do
 - [ ] teknofest raporu için çekirdek yazımı
+
+
+# Guideline
+
+* Dataseti hazır hale getirmek için:
+  1. [script2downloaddataset.py'yi](Datasets/CQ500/script2downloaddataset.py) kullanarak zip dosyalarını indirin ve unzip edin
+  2. [displayexample.py](Datasets/CQ500/displayexample.py) ile verileri görebilirsiniz
+  3. [maketfrecord.py](Datasets/CQ500/maketfrecord.py) ile TFRecord dosyasını oluşturun
+  4. [DatasetEngine.py](Datasets/DatasetEngine.py) ile TFDataset formatında bir dataset oluşturun
+  5. önceki adımdaki dataset objesini keras modeliniz ile kullanabilirsiniz. [Bakınız](https://stackoverflow.com/questions/46135499/how-to-properly-combine-tensorflows-dataset-api-and-keras)

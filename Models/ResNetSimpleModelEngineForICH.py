@@ -4,9 +4,6 @@ import tensorflow as tf
 from Datasets import DatasetEngine
 from TensorBoardEngine import TensorBoardCallback
 
-from tensorflow.python.keras.utils import metrics_utils
-from tensorflow.python.ops import math_ops
-
 
 class SimpleModelEngine:
     @tf.function

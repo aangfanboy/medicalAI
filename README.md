@@ -13,7 +13,8 @@ https://www.teknofest.org/tr/competitions/competition/34
 # Classification için to-do
 
 - [X] dataseti stream eden bi class yazılmalı. klasik tf.Dataset formatı, output olarak resim(x) ve ICH(y)(ICH'yi 1 ve 0'a yuvarlayarak) değerini verecek
-- [ ] CNN modeli oluşturulmalı. dataset olarak üstteki tf.Dataset objesini kullanacak, son layer'ı Dense(2, activation="softmax") şeklinde olmalı. Tensorboard kullanılması + olur)
+- [x] CNN modeli oluşturulmalı. dataset olarak üstteki tf.Dataset objesini kullanacak, son layer'ı Dense(2, activation="softmax") şeklinde olmalı. Tensorboard kullanılması + olur)
+- [ ] Birden fazla label için tahmin yapan model oluşturulmalı(DatasetEngine class'ındaki labels_tfrecord_label parametresi değiştirilerek kolayca diğer label'lar stream edilebilir)
 
 # Yarışma için to-do
 - [ ] teknofest raporu için çekirdek yazımı
@@ -27,3 +28,5 @@ https://www.teknofest.org/tr/competitions/competition/34
   3. [maketfrecord.py](Datasets/CQ500/maketfrecord.py) ile TFRecord dosyasını oluşturun
   4. [DatasetEngine.py](Datasets/DatasetEngine.py) ile TFDataset formatında bir dataset oluşturun
   5. önceki adımdaki dataset objesini keras modeliniz ile kullanabilirsiniz. [Bakınız](https://stackoverflow.com/questions/46135499/how-to-properly-combine-tensorflows-dataset-api-and-keras)
+
+PS: 3. adımda oluşturulan TFRecord dosyasını ZIP olarak [buradan](https://drive.google.com/file/d/1JdVguXdw62NPI9r0u_nv_T_z9Gyy7qUu/view?usp=sharing) indirebilirsiniz. ZIP dosyası 2.8 GB, TFRecord dosyası ise 8.4 GB büyüklüğünde 

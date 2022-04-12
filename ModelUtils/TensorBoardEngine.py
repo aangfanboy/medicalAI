@@ -43,3 +43,4 @@ class TensorBoardCallback:
 
         with self.file_writer.as_default():
             tf.summary.image(name, data, max_outputs=max_outputs, step=step)
+

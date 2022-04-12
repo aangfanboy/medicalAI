@@ -1,6 +1,5 @@
 import tensorflow as tf
 
-
 class DataEngineTFRecord:
     def mapper(self, tfrecord_data):
         features = {
@@ -55,19 +54,3 @@ class DataEngineTFRecord:
             print("[*] test batch split")
 
         self.dataset = self.dataset.repeat(epochs)
-
-
-if __name__ == '__main__':
-    data_engine = DataEngineTFRecord(
-        "CQ500/CQ500_all_data.tfrecord",
-        batch_size=8,
-        epochs=1,  # set to -1 so it can stream forever
-        buffer_size=500000,
-        reshuffle_each_iteration=True,
-        test_batch=5,
-        map_to=True,
-        image_raw_tfrecord_label="image_raw",
-        labels_tfrecord_label=["ich"],  # only streams 'ich' value, more labels in Datasets/CQ500/maketfrecord.py
-        function_for_image_tfrecord=lambda x: tf.reshape(x, (112, 112, 1)),
-        function_for_labels_tfrecord=lambda x: tf.cond(x < 0.5, true_fn=lambda: 0, false_fn=lambda: 1)
-    )

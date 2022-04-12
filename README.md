@@ -1,32 +1,3 @@
-# teknofestcomp
-https://www.teknofest.org/tr/competitions/competition/34
+[x] %100 validation accuracy on CQ500 Dataset with all 9 labels, colab file is [here](https://colab.research.google.com/drive/1ZcUeiU9vrekixdUKs78DKvL-NAjuBuCa?usp=sharing)
 
-
-# [Veri setleri](/Datasets)
-* ### [CQ500](/Datasets/CQ500)
-  * qure.ai websitesinden alındı
-  * [script2downloaddataset.py](Datasets/CQ500/script2downloaddataset.py) ile veri seti indirilebilir, model geliştirirken datasetin hepsini indirmenize gerek yok ilk 30-40 zip dosyası yeterli
-  * [displayexample.py](Datasets/CQ500/displayexample.py) ile örnek bi resmi display edip etiketlerine bakabilirsiniz. Etiketler probability şeklinde, yuvarlayarak 1 ve 0 değerlerine ulaşabilirsiniz
-  * Modelin örnek sonuçları için [buraya](http://headctstudy.qure.ai/explore_data) bakabilirsiniz
-  * 
-
-# Classification için to-do
-
-- [X] dataseti stream eden bi class yazılmalı. klasik tf.Dataset formatı, output olarak resim(x) ve ICH(y)(ICH'yi 1 ve 0'a yuvarlayarak) değerini verecek
-- [x] CNN modeli oluşturulmalı. dataset olarak üstteki tf.Dataset objesini kullanacak, son layer'ı Dense(2, activation="softmax") şeklinde olmalı. Tensorboard kullanılması + olur)
-- [ ] Birden fazla label için tahmin yapan model oluşturulmalı(DatasetEngine class'ındaki labels_tfrecord_label parametresi değiştirilerek kolayca diğer label'lar stream edilebilir)
-
-# Yarışma için to-do
-- [ ] teknofest raporu için çekirdek yazımı
-
-
-# Guideline
-
-* Dataseti hazır hale getirmek için:
-  1. [script2downloaddataset.py'yi](Datasets/CQ500/script2downloaddataset.py) kullanarak zip dosyalarını indirin ve unzip edin
-  2. [displayexample.py](Datasets/CQ500/displayexample.py) ile verileri görebilirsiniz
-  3. [maketfrecord.py](Datasets/CQ500/maketfrecord.py) ile TFRecord dosyasını oluşturun
-  4. [DatasetEngine.py](Datasets/DatasetEngine.py) ile TFDataset formatında bir dataset oluşturun
-  5. önceki adımdaki dataset objesini keras modeliniz ile kullanabilirsiniz. [Bakınız](https://stackoverflow.com/questions/46135499/how-to-properly-combine-tensorflows-dataset-api-and-keras)
-
-PS: 3. adımda oluşturulan TFRecord dosyasını ZIP olarak [buradan](https://drive.google.com/file/d/1JdVguXdw62NPI9r0u_nv_T_z9Gyy7qUu/view?usp=sharing) indirebilirsiniz. ZIP dosyası 2.8 GB, TFRecord dosyası ise 8.4 GB büyüklüğünde 
+TFRecord file is available in [here](https://drive.google.com/file/d/1JdVguXdw62NPI9r0u_nv_T_z9Gyy7qUu/view?usp=sharing) indirebilirsiniz. ZIP dosyası 2.8 GB, TFRecord dosyası ise 8.4 GB büyüklüğünde 

@@ -3,18 +3,18 @@
 TFRecord file is available in [here](https://drive.google.com/file/d/1JdVguXdw62NPI9r0u_nv_T_z9Gyy7qUu/view?usp=sharing). ZIP file is 2.8 GB big and TFRecord file is 8.4 GB big.
 
 
-![Alt text]("TestImages/IHPCH.jpg")
+![Alt text](TestImages/IHPCH.jpg)
 
 model outputs for image above:
 
-ich ---> 1
-iph ---> 1
-ivh ---> 1
-sdh ---> 0
-edh ---> 0
-sah ---> 0
-calvarial_fracture ---> 0
-mass_effect ---> 1
-midline_shift ---> 1
+* ich ---> 1
+* iph ---> 1
+* ivh ---> 1
+* sdh ---> 0
+* edh ---> 0
+* sah ---> 0
+* calvarial_fracture ---> 0
+* mass_effect ---> 1
+* midline_shift ---> 1
 
 image found in [here](https://www.msdmanuals.com/professional/neurologic-disorders/stroke/intracerebral-hemorrhage)

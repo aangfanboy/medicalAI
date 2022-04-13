@@ -78,7 +78,7 @@ class MainModelEngine:
             tf_record_path,
             batch_size=self.batch_size,
             epochs=1,  # set to -1 so it can stream forever
-            buffer_size=100000,
+            buffer_size=10000,
             reshuffle_each_iteration=False,
             test_batch=int((20*8)/self.batch_size),
             map_to=True,

@@ -36,11 +36,17 @@ class L9ModelEngine(MainModelEngine):
             labels_tfrecord_label=["ich", "iph", "ivh", "sdh", "edh", "sah",
                                    "calvarial_fracture", "mass_effect", "midline_shift"],
             model_path="resnet50PL.h5",
-            batch_size=128,
+            batch_size=16,
             lr_dict={0:0.001, 1:0.0005, 3: 0.0001}
         )
 
 
 if __name__ == "__main__":
+    mode = "test"
     l9me = L9ModelEngine()
-    l9me()
+
+    if mode == "train":
+        l9me()
+
+    elif mode == "test":
+        l9me.test_model()
